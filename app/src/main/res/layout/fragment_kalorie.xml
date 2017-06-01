@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_weight="0.94"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/kalorie_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="SPALENE KALORIE"
+            style="@style/OwnStyleTextField"
+            />
+
+
+        <TextView
+            android:id="@+id/kalorie_long"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:layout_below="@+id/kalorie_text"
+            style="@style/OwnStyleTextField" />
+    </RelativeLayout>
+
+</LinearLayout>

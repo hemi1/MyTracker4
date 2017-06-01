@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vocko.sk.mytracker">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:supportsRtl="true">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyB1eI4qhzu3LuWV6NrgJKDobSvnb4--N2o"/>
+          <activity android:name="vocko.sk.mytracker.MainActivity"
+              android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="vocko.sk.mytracker.TrackerService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name="vocko.sk.mytracker.DetailActivity"></activity>
+        <activity android:name="vocko.sk.mytracker.MusicActivity"
+
+            android:exported="true" ></activity>
+        <activity android:name="vocko.sk.mytracker.MapViewActivity"
+            android:configChanges="orientation|screenSize"/>
+    </application>
+
+</manifest>
